@@ -1,0 +1,98 @@
+.dashBoard-header {
+    display: flex;
+    height: 15vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    flex-direction: column;
+    gap: 2vh;
+    margin: 1vh;
+
+    div {
+        gap: 1vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .userPhotoHeader {
+        height: 6vh;
+        width: 6vh;
+        border-radius: 50%;
+
+    }
+
+    button {
+        border-radius: 10px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+}
+
+
+
+.options {
+    display: flex;
+    gap: 5px;
+
+    img {
+        object-fit: cover;
+    }
+
+    .logout {
+        background-color: transparent;
+        color: white;
+        border: none;
+
+        img {
+            height: 40px;
+            object-fit: cover;
+        }
+
+        &:hover {
+            animation: wiggle 0.5s ease-in-out;
+        }
+    }
+
+    .preferences {
+        background-color: transparent;
+        border: none;
+        color: white;
+
+        img {
+            height: 40px;
+        }
+
+        &:hover {
+            animation: wiggle 0.5s ease-in-out;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .userPhotoHeader {
+        height: 5vh !important;
+        width: 5vh !important;
+        border-radius: 50%;
+    }
+
+
+    .dashBoard-header {
+        margin-top: 20px !important;
+        display: flex;
+        height: 5vh;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        flex-direction: row;
+        gap: 2vh !important;
+        margin: 1vh !important;
+    }
+
+}

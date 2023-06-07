@@ -1,0 +1,466 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/*-------- Dashboard  --------*/
+
+
+
+.dashboard {
+  display: flex;
+  justify-content: 1rem 2rem;
+  min-width: 100vh;
+  height: 100vh;
+
+
+
+}
+
+
+.dashboard .swipe-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  top: 0px;
+  animation: slide-in 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards,
+    wiggle 0.5s ease-in-out;
+
+
+
+
+
+
+}
+
+
+
+@keyframes slide-in {
+  0% {
+    top: 100px;
+  }
+
+  50% {
+    top: -50px;
+  }
+
+  100% {
+    top: 0;
+  }
+
+
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(5deg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+
+
+}
+
+.swipe {
+  position: absolute;
+
+}
+
+.dashboard .card-container {
+  width: 400px;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  margin-top: 3vh;
+  width: 400px;
+  height: 650px;
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0) !important
+}
+
+
+.card h3 {
+  margin-top: 0;
+}
+
+.dashboard .swipe-info {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+}
+
+
+
+
+/*--------LeftSide Container --------*/
+.left-side-container {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  width: 20%;
+  text-align: left;
+  z-index: 1;
+}
+
+.left-side-container .chat-container-header {
+  background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-side-container .option {
+  border: none;
+  background-color: rgb(255, 255, 255);
+  border-bottom: solid 4px rgb(243, 33, 33);
+  font-size: 20px;
+  margin: 2px;
+  padding: 10px;
+}
+
+.left-side-container .option:disabled {
+  border-bottom: solid 4px rgb(187, 187, 187);
+}
+
+.left-side-container .profile,
+.left-side-container .log-out-icon {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.left-side-container .allMatches {
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+
+.img-container {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.img-container img {
+  width: 100%;
+}
+
+
+
+
+
+/* .card-carosel-tin{
+  width: 380px;
+  height: 640px;
+} */
+
+.imageCoversOfCarts {
+  width: 450px;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.carousel-indicators {
+  z-index: 15;
+  bottom: 93% !important
+}
+
+.button-container-tin img {
+  width: 100%;
+}
+
+.overlay-tin {
+  position: inherit;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  overflow: hidden;
+  background: #C33764;
+  /* fallback colour. Make sure this is just one solid colour. */
+  /* background: -webkit-linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)); */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9305847338935574) 11%, rgba(190, 137, 22, 0) 28%);
+}
+
+.user-name-cards {
+  color: white;
+  font-weight: 700;
+}
+
+.button-container-tin {
+  justify-content: space-around;
+  display: flex;
+  width: 400px;
+  z-index: 10;
+  position: fixed;
+  bottom: 10%;
+  height: 68px;
+}
+
+.button-container-tin button {
+  width: 17%;
+  height: 97%;
+  border-radius: 60px !important;
+  
+
+}
+
+.bahur {
+  position: absolute;
+  color: white;
+  z-index: 15;
+  transform: rotate(-50grad);
+  display: none;
+
+}
+
+.photo-loader {
+
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  background-position: center center;
+  background-size: cover;
+}
+
+.user-information {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  bottom: 16%;
+  padding: 16px;
+
+}
+
+.user-years-cards {
+  color: white;
+  font-size: 28px;
+  margin-left: 13px;
+}
+
+.carousel-inner {
+  border-radius: 5px;
+}
+
+.user-information>div {
+  display: flex;
+  align-items: baseline;
+  margin: -7px 0;
+}
+
+.information-text {
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+
+}
+
+.information-important-tnd {
+  display: flex;
+  justify-content: space-between;
+  width: 360px;
+}
+
+.infoIcon {
+  z-index: 15;
+  cursor: pointer;
+}
+
+
+
+
+.card-container-no-users {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  width: 400px;
+  height: 650px;
+
+
+}
+
+.card-container-no-users p {
+  color: white;
+  text-align: center;
+}
+
+.refreshUsers.btn.btn-primary {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column !important;
+}
+
+.refreshUsers img {
+  height: 50px;
+  width: 50px;
+}
+
+
+@media screen and (max-width: 480px) {
+
+
+
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    min-width: 100%;
+    overflow-x: hidden;
+    max-height: 100vh !important;
+    height: 100vh !important;
+
+  }
+
+  .dashboard .swipe-container {
+    overflow: none;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto !important;
+    position: relative;
+    top: 0px;
+    animation: slide-in 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards,
+      wiggle 0.5s ease-in-out;
+  
+  }
+
+  .dashboard .card-container {
+    width: 400px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .card {
+    margin-top: 40vh;
+    width: 32vh;
+    height: 40vh !important;
+    max-height: 100%;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+  }
+
+ 
+  
+
+  .imageCoversOfCarts {
+    width: 450px;
+    height: 100% !important;
+    background-size: cover;
+    background-position: center;
+  
+  }
+
+
+  .overlay-tin {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+    background: black;
+    background: #C33764;
+    /* fallback colour. Make sure this is just one solid colour. */
+    /* background: -webkit-linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)); */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9305847338935574) 11%, rgba(190, 137, 22, 0) 28%);
+  }
+
+
+
+  .card-carousel-tin {
+    height: 50vh !important;
+  }
+
+
+  .button-container-tin {
+    justify-content: space-around;
+    display: flex;
+    width: 100% !important;
+    z-index: 10;
+    position: relative;
+    top: 530%;
+    gap: 5%;
+    bottom: 100%;
+    height: 8vh;
+    padding: 1%;
+    margin-bottom: 0%;
+  }
+  
+  .button-container-tin button {
+    background-color: rgba(0, 0, 0, 0.562) !important;
+    width: 3rem !important;
+    height: 3rem;
+    border-radius: 60px !important;
+    margin-bottom: 0px !important;
+  
+  }
+
+  .user-information {
+    position: relative;
+    bottom: 60%;
+  }
+
+  .user-name-cards {
+    font-size: 110%;
+  }
+
+}
+
+
+
+
+
+
+

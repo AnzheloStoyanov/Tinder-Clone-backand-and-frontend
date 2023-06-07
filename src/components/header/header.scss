@@ -1,0 +1,91 @@
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .logo {
+    max-height: 10vh;
+    margin-right: 20px;
+  }
+  
+  .menu-box {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .menu a:hover {
+    color: #d6002f;
+  }
+  
+  .header-button {
+    color: black;
+    width: 146px;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 20px;
+    border: none;
+    height: 43px;
+    background-color: white;
+  }
+  
+  .header-button:hover {
+    background-color: rgb(218, 212, 212);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .header {
+      padding: 0 20px;
+    }
+  
+    .menu-box {
+      width: 100%;
+      justify-content: space-between;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .logo {
+      max-height: 7vh;
+    }
+  
+    .menu {
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+    .menu a {
+      margin-right: 0;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+  
+    .header-button {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
